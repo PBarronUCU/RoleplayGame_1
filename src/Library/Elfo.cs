@@ -97,7 +97,7 @@ public class Elfo
             mago.Vida -= danio_resultante;
         }
     }
-    public void Atacar_Mago(Enano enano)
+    public void Atacar_Enano(Enano enano)
     {
         int danio = this.Ataque_total;
         int defensa = enano.Defensa_total;
