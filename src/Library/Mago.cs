@@ -6,6 +6,9 @@ public class Mago
 {
     public string Nombre {get; set;}
     public int Vida { get; set; } = 100;
+    /// <summary>
+    /// Constructor de Mago, solo hace falta el nombre
+    /// </summary>
     
     public Mago(string name)
     {
@@ -16,7 +19,9 @@ public class Mago
     private List<ItemMagico> Lista_ItemsMagicos = new List<ItemMagico>();
     private Libro Libro_Hechizos;
     
-    
+    /// <summary>
+    /// El ataque total se calcula solamente en base a los objetos
+    /// </summary>
     public int Ataque_total
     {
         get
@@ -42,7 +47,9 @@ public class Mago
         }
         
     }
-
+    /// <summary>
+    /// La defensa total se calcula solamente en base a los objetos
+    /// </summary>
     public int Defensa_total
     {
         get
