@@ -1,5 +1,7 @@
 namespace Library;
-
+/// <summary>
+/// Clase mago,tiene objetos magicos y libro de hehcizo especiales.
+/// </summary>
 public class Mago
 {
     public string Nombre {get; set;}
@@ -139,13 +141,7 @@ public class Mago
 
     public void Quitar_Item(Item item)
     {
-        foreach (var objeto in Lista_Items.ToList())
-        {
-            if (item == objeto)
-            {
-                Lista_Items.Remove(objeto);
-            }
-        }
+        Lista_Items.Remove(item);
     }
     
     public void Agregar_ItemMagico(ItemMagico itemMag)
@@ -155,13 +151,7 @@ public class Mago
     
     public void Quitar_ItemMagicos(ItemMagico itemMag)
     {
-        foreach (var objeto in Lista_ItemsMagicos.ToList())
-        {
-            if (itemMag == objeto)
-            {
-                Lista_ItemsMagicos.Remove(objeto);
-            }
-        }
+        Lista_ItemsMagicos.Remove(itemMag);
     }
 
     public void Agregar_Libro(Libro libro)
