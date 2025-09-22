@@ -7,7 +7,7 @@ namespace Library
         
         private List<Item> Lista_Items = new List<Item>();
 
-        public Enano(string nombre, int defensaTotal)
+        public Enano(string nombre)
         {
             this.Nombre = nombre;
         }
@@ -22,7 +22,7 @@ namespace Library
             Lista_Items.Remove(item); //Se quita un item de la lista.
         }
         
-        public int AtaqueTotal
+        public int Ataque_Total
         {
             get
             {
@@ -35,7 +35,7 @@ namespace Library
             }
         }
 
-       public int DefensaTotal
+       public int Defensa_total
         {
             get
             {
@@ -50,8 +50,8 @@ namespace Library
 
         public void Atacar_Elfo(Elfo elfo)
         {
-            int danio = this.AtaqueTotal; //Se le asigna el valor de AtaqueTotal al daño que resive.
-            int defensa = elfo.DefensaTotal; //Similar pasa con la Defensa.
+            int danio = this.Ataque_Total; //Se le asigna el valor de AtaqueTotal al daño que resive.
+            int defensa = elfo.Defensa_total; //Similar pasa con la Defensa.
             int danioResultante; //Se devuelve el daño que resive.
 
             if (defensa > danio)
@@ -72,8 +72,8 @@ namespace Library
         }
         public void Atacar_Mago(Mago mago)
         {
-            int danio = this.AtaqueTotal; //Se le asigna el valor de AtaqueTotal al daño que resive.
-            int defensa = mago.DefensaTotal; //Similar pasa con la Defensa.
+            int danio = this.Ataque_Total; //Se le asigna el valor de AtaqueTotal al daño que resive.
+            int defensa = mago.Defensa_total; //Similar pasa con la Defensa.
             int danioResultante; //Se devuelve el daño que resive.
 
             if (defensa > danio)
@@ -95,8 +95,8 @@ namespace Library
     
         public void Atacar_Mago(Enano enano)
         {
-            int danio = this.AtaqueTotal; //Se le asigna el valor de AtaqueTotal al daño que resive.
-            int defensa = enano.DefensaTotal; //Similar pasa con la Defensa.
+            int danio = this.Ataque_Total; //Se le asigna el valor de AtaqueTotal al daño que resive.
+            int defensa = enano.Defensa_total; //Similar pasa con la Defensa.
             int danioResultante; //Se devuelve el daño que resive.
 
             if (defensa > danio)
@@ -115,5 +115,7 @@ namespace Library
                 enano.Vida -= danioResultante; //Sinó, se le resta a su vida lo que resive de daño.
             }
         }
+
+        public int DefensaTotal { get; set; }
     }
 }
