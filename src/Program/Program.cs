@@ -22,5 +22,6 @@ public static class Program
         Console.WriteLine($"{Patri.Nombre} ataco a {Rodri.Nombre}.{Rodri.Nombre} quedo con {Rodri.Vida}");
         Rodri.Atacar_Mago(Patri);
         Console.WriteLine($"{Rodri.Nombre} ataco a {Patri.Nombre}.{Patri.Nombre} quedo con {Patri.Vida}");
+        
     }
 }
