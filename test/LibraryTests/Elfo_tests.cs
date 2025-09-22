@@ -1,25 +1,48 @@
 using Library;
 
-namespace ProgramNamespace 
+namespace LibraryTests;
+/// <summary>
+/// Tests para la clase <see cref="Elfo"/>.
+/// </summary>
+
+public class Elfotest
 {
-    public static class Program
+    [SetUp]
+    public void Setup()
     {
-        public static void Main(string[] args)
-        {
-            
-            Elfo Patri = new Elfo("Patri");
-            Elfo Rodri = new Elfo("Rodri");
 
-            
-            Item arco = new Item("arco", 20, 0);
-            Item escudo = new Item("escudo", 0, 20);
 
-            Patri.AgregarItem(arco);
-            Rodri.AgregarItem(escudo);
+    }
 
-            // Probar ataque
-            Patri.Atacar_Elfo(Rodri);
-            Console.WriteLine($"Vida de {Rodri.Nombre} después del ataque: {Rodri.Vida}");
-        }
+    [Test]
+    public void TestProperties()
+    {
+        const string name = "Nombre";
+        Elfo rodri = new Elfo(name);
+        
+        Assert.AreEqual(name, rodri.Nombre);
+
+        const string anothername = "OtroNombre";
+        rodri.Nombre = anothername;
+        
+        Assert.AreEqual(anothername, rodri.Nombre);
+
+    }
+
+    
+    /// <summary>
+    /// Prueba la propiedad <see cref="Elfo.Ataque_total"/>.
+    /// </summary>
+    [Test]
+    public void Ataque_total()
+    {
+        Item Objeto1 = new Item("Arco", 20, 0);
+        Item Objeto2 = new Item("Capa", 0, 10);
+        Elfo Legolas = new Elfo("Legolas");
+        Legolas.AgregarItem(Objeto1);
+        Legolas.AgregarItem(Objeto2);
+        Assert.AreEqual(100, Legolas.Ataque_total);
+
+
     }
 }
