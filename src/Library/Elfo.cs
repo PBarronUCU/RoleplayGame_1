@@ -140,6 +140,12 @@ public class Elfo
     {
         this.Vida = 100;
     }
+
+    
+    
+
 }
+
+
     
     
