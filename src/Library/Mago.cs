@@ -36,12 +36,6 @@ public class Mago
             {
                 resultado += itemMagico.Ataque;
             }
-
-            if (Libro_Hechizos != null)
-            {
-                int damage = Libro_Hechizos.Hechizo.Ataque;
-                resultado += damage;
-            }
             
             return resultado;
         }
